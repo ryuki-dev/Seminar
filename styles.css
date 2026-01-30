@@ -1,0 +1,37 @@
+:root{--accent:#2b6cb0;--muted:#666}
+body{font-family:Inter,system-ui,Segoe UI,Arial; margin:0;background:#f5f7fb;color:#111}
+.container{max-width:1100px;margin:28px auto;padding:16px;display:grid;grid-template-columns:360px 1fr;gap:20px}
+.panel{background:#fff;border-radius:8px;padding:16px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+label{display:block;margin:10px 0 6px;font-size:13px;color:var(--muted)}
+input[type=text], input[type=email], textarea, select{width:100%;padding:8px 10px;border:1px solid #e6eef8;border-radius:6px;font-size:14px}
+textarea{min-height:80px;resize:vertical}
+.row{display:flex;gap:8px}
+button{background:var(--accent);color:#fff;border:0;padding:8px 12px;border-radius:6px;cursor:pointer}
+.secondary{background:#edf2ff;color:var(--accent)}
+.preview{padding:26px}
+
+/* Resume styles */
+.resume{background:#fff;padding:28px;border-radius:6px;box-shadow:0 3px 12px rgba(10,20,30,0.06);max-width:820px;margin:auto}
+.r-header{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #f0f4f8;padding-bottom:12px;margin-bottom:14px}
+.name{font-size:22px;font-weight:700}
+.title{color:var(--muted);font-size:13px}
+.section{margin-bottom:12px}
+.section h3{font-size:14px;margin:0 0 8px}
+.item{margin-bottom:8px}
+.muted{color:var(--muted)}
+
+/* Templates */
+.template-minimal .name{font-family:Merriweather,serif;color:#0f172a}
+.template-modern .resume{border-left:6px solid var(--accent);}
+.template-classic .resume{font-family:Merriweather,serif;color:#111}
+
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.small{padding:6px 8px;font-size:13px;border-radius:6px}
+
+.list-add{display:flex;gap:8px;margin-top:6px}
+.list-item{display:flex;gap:8px;margin-top:8px}
+.list-item input{flex:1}
+
+footer{max-width:1100px;margin:18px auto;text-align:center;color:#666;font-size:13px}
+
+@media (max-width:880px){.container{grid-template-columns:1fr;}}

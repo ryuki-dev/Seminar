@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume Builder — Single File</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="panel">
+      <h2>Resume Builder</h2>
+
+      <label for="template">Template</label>
+      <select id="template">
+        <option value="minimal">Minimal</option>
+        <option value="modern">Modern</option>
+        <option value="classic">Classic</option>
+      </select>
+
+      <label for="name">Full name</label>
+      <input id="name" type="text" placeholder="Jane Doe" />
+
+      <label for="title">Title / Current role</label>
+      <input id="title" type="text" placeholder="Software Engineer" />
+
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="jane@email.com" />
+
+      <label for="phone">Phone</label>
+      <input id="phone" type="text" placeholder="(+1) 555-555-555" />
+
+      <label for="summary">Summary</label>
+      <textarea id="summary" placeholder="Brief summary..." ></textarea>
+
+      <div class="section">
+        <h3 style="margin-bottom:6px">Experience</h3>
+        <div id="experience-list"></div>
+        <div class="list-add">
+          <input id="exp-company" type="text" placeholder="Company" />
+          <input id="exp-role" type="text" placeholder="Role" />
+          <input id="exp-dates" type="text" placeholder="Dates" style="width:120px" />
+          <button id="add-exp" class="small">Add</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3 style="margin-bottom:6px">Education</h3>
+        <div id="education-list"></div>
+        <div class="list-add">
+          <input id="edu-school" type="text" placeholder="School" />
+          <input id="edu-degree" type="text" placeholder="Degree" />
+          <input id="edu-dates" type="text" placeholder="Dates" style="width:120px" />
+          <button id="add-edu" class="small">Add</button>
+        </div>
+      </div>
+
+      <label for="skills">Skills (comma separated)</label>
+      <input id="skills" type="text" placeholder="Python, JavaScript, SQL" />
+
+      <div class="controls">
+        <button id="save">Save</button>
+        <button id="load" class="secondary">Load</button>
+        <button id="export" class="secondary">Export PDF</button>
+        <button id="download" class="secondary">Download JSON</button>
+        <button id="clear" class="secondary">Clear</button>
+      </div>
+
+      <p style="margin-top:10px;color:#666;font-size:13px">Data is stored locally in your browser. Use the download button to back up.</p>
+    </div>
+
+    <div class="panel preview">
+      <div id="preview-root" class="resume-root template-minimal">
+        <div class="resume" id="resume-preview">
+          <!-- preview content rendered by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>Built with ❤️ — open <code>index.html</code> in your browser to use</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
